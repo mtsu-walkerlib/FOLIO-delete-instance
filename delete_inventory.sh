@@ -1,7 +1,6 @@
 #!/bin/bash
 #delete items
 # 
-cd /home/rwilson/folio_scripting/recordmanipScipts
 tenant=$(cat tenant)
 okapi_url=$(cat okapi.url)
 okapi_token=$(cat okapi.token)

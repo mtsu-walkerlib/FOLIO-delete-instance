@@ -2,7 +2,6 @@
 
 ##Step 1
 ##GET instance UUIDs
-cd /home/rwilson/folio_scripting/recordmanipScipts
 rm instance_uuids
 tenant=$(cat tenant)
 okapi_url=$(cat okapi.url)
