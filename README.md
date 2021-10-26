@@ -1,6 +1,11 @@
 # FOLIO-delete-instance
-Bash scripts to delete instance, holding, item, srs
+Bash scripts to delete instance, holding, item, srs. 
 
+The get_deletetagUUIDS.sh script will get all Instance UUIDs tagged 'delete'. Using that list, it will then get holdings IDs and item IDs. 
+    usage -- ./get_deletetagUUIDS.sh
+
+The delete_inventory.sh script deletes in this order, items, holding, srs, and instance
+    usage -- ./delete_inventory.sh
 These scripts all built off record-delete script at https://github.com/banerjek/folio-utils 
 
 These notes and requirements are based off those at the above repo created by Kyle Banerjee.
