@@ -9,7 +9,7 @@
 
 ##Command to turn a mrc into a text file for export of 999$s for srs delete work
 #5.
-mono /home/rwilson/marcedit/cmarcedit.exe -s *.mrc -d srs_ids.txt -break
+mono cmarcedit.exe -s *.mrc -d srs_ids.txt -break
 #6. grep 999$s to another file with just SRS ID
 grep '=999' srs_ids.txt | grep -oE '\$s[a-z0-9-]*' | grep -oE '[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}' > srs_uuids
 
