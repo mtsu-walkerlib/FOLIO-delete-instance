@@ -33,20 +33,6 @@ done < holding_uuids
 
 echo "deleted $(wc -l holding_uuids)"
 
-#SRS Delete
-echo "Holdings finished: Beginning SRS"
-while read -r uuid;do
-
-uuid=$(sed 's/[^0-9a-z\-]//g' <<< $uuid)
-
-recordtype="instance-storage/instances"
-
-apicall=$(curl -s -w '\n' -X DELETE -D -H "Accept: application/json" -H "X-Okapi-Tenant: ${tenant}" -H "x-okapi-token: ${okapi_token}" "${okapi_url}/${recordtype}/${uuid}/source-record")
-
-echo $apicall
-done < instance_uuids
-
-echo "Finished SRS; Beginning Instances"
 ##Instance Delete
 while read -r uuid;do
 
